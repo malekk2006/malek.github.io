@@ -3,19 +3,92 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Developer | MALEKverse</title>
+  <title>Developer | MALEK AL-ASTAL</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" href="assets/icon.jpg" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Bree+Serif&family=Cairo:wght@700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .dev-section {
+      max-width: 600px;
+      margin: 55px auto 45px auto;
+      background: rgba(34,34,44,0.97);
+      border-radius: 33px;
+      box-shadow: 0 8px 32px #ff6a0044;
+      padding: 45px 28px 32px 28px;
+      text-align: right;
+      font-family: 'Bree Serif','Cairo',serif;
+      position: relative;
+      border: 2.2px solid #ff6a0044;
+      color: #fff;
+      direction: rtl;
+    }
+    .dev-title {
+      font-size: 2.14rem;
+      font-family: 'Bree Serif','Montserrat',serif;
+      color: #ff6a00;
+      letter-spacing: 2px;
+      margin-bottom: 14px;
+      text-shadow: 0 2px 12px #ff6a0044;
+      font-weight: bold;
+      text-align: center;
+    }
+    .dev-steps ol {
+      padding-right: 16px;
+    }
+    .dev-steps li {
+      margin-bottom: 12px;
+      font-size: 1.09em;
+      line-height: 1.7;
+      padding-bottom: 6px;
+    }
+    .dev-steps ul {
+      padding-right: 22px;
+      margin: 3px 0 7px 0;
+      font-size: 1em;
+    }
+    .magic-word {
+      color: #ff6a00;
+      font-weight: bold;
+      font-family: 'Montserrat',serif;
+      letter-spacing: 1px;
+    }
+    pre, code {
+      background: #232946;
+      color: #ffd700;
+      border-radius: 8px;
+      padding: 9px 11px;
+      font-size: 1em;
+      margin: 8px 0;
+      direction:ltr;
+      text-align:left;
+      font-family: 'Cairo', monospace;
+      overflow-x: auto;
+    }
+    .ready-helper {
+      margin-top: 20px;
+      padding: 12px 10px;
+      background: linear-gradient(90deg,#ff6a0033 0%,#1e1e2f99 100%);
+      border-radius: 14px;
+      color: #ffd700;
+      font-size: 1.08em;
+      text-align: center;
+    }
+    @media (max-width: 700px) {
+      .dev-section { padding: 13px 2vw; max-width: 99vw;}
+      .dev-title { font-size: 1.09rem;}
+      .dev-steps li { font-size: 1em;}
+      pre, code { font-size: 0.9em; }
+    }
+  </style>
 </head>
 <body>
-  <div class="animated-bg"></div>
+  <div class="bg-flames"></div>
   <header class="main-header glass">
     <nav class="navbar">
       <div class="logo">
         <img src="assets/icon.jpg" alt="Logo" class="logo-img" />
-        MALEKverse
+        <span>MALEK AL-ASTAL</span>
       </div>
       <ul class="nav-menu">
         <li><a href="index.html">Home</a></li>
@@ -32,63 +105,58 @@
         <a href="https://wa.me/972598561044" target="_blank"><i class="fab fa-whatsapp"></i></a>
         <a href="https://www.linkedin.com/in/malek-alastal-85a630387/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
       </div>
-      <div class="lang-switch">
-        <input type="checkbox" id="langToggle" />
-        <label for="langToggle" class="lang-label"><span>EN</span></label>
-      </div>
     </nav>
   </header>
   <main>
-    <!-- العربي -->
-    <section class="dev-section glass lang-ar">
-      <h1 class="epic-title"><i class="fa-solid fa-code"></i> Developer</h1>
-      <h2 class="highlight" style="margin-top:20px;">🛠 خطوات تثبيت Kali Linux على VMware</h2>
+    <section class="dev-section glass">
+      <div class="dev-title"><i class="fa-solid fa-code"></i> Developer</div>
+      <h2 class="magic-word" style="margin-bottom:17px;">🛠 خطوات تثبيت Kali Linux على VMware</h2>
       <div class="dev-steps">
         <ol>
           <li>
             <b>التحضير</b>
             <ul>
-              <li>تكون قد حمّلت ملف ISO لكالي لينكس من الموقع الرسمي.</li>
-              <li>تأكّد أن جهازك يدعم الافتراضية (Virtualization) — لازم تكون مفعلة في BIOS/UEFI (مثل Intel VT‑x أو AMD‑V).</li>
-              <li>جهّز موارد الجهاز (رام، مساحة قرص) كافية للجهاز الافتراضي.</li>
+              <li>حمّل ملف ISO لكالي لينكس من الموقع الرسمي.</li>
+              <li>تأكد أن جهازك يدعم الافتراضية (Virtualization) — لازم تكون مفعلة في BIOS/UEFI (مثل Intel VT‑x أو AMD‑V).</li>
+              <li>جهز موارد الجهاز (رام، مساحة قرص) كافية للجهاز الافتراضي.</li>
             </ul>
           </li>
           <li>
             <b>إنشاء جهاز افتراضي جديد في VMware</b>
             <ul>
-              <li>افتح VMware → اختَر <span class="magic-word">Create a New Virtual Machine</span>.</li>
-              <li>اختر نوع التثبيت: غالبًا <span class="magic-word">Custom (Advanced)</span> للحصول على خيارات أكثر تحكّم.</li>
-              <li>عندما يُطلب، أشر إلى ملف الـ ISO الذي حمّلته.</li>
+              <li>افتح VMware → اختر <span class="magic-word">Create a New Virtual Machine</span>.</li>
+              <li>اختر نوع التثبيت: غالبًا <span class="magic-word">Custom (Advanced)</span> لتحكم أكثر.</li>
+              <li>عند الطلب، اختر ملف الـ ISO الذي حمّلته.</li>
               <li>
-                اختَر نظام التشغيل الضيف:
+                نظام التشغيل الضيف:
                 <ul>
                   <li>نوع: <span class="magic-word">Linux</span></li>
-                  <li>الإصدار: اختر توزيعة <span class="magic-word">Debian (64-bit)</span> أو ما يناسب إصدار كالي.</li>
+                  <li>الإصدار: <span class="magic-word">Debian (64-bit)</span> أو ما يناسب إصدار كالي.</li>
                 </ul>
               </li>
-              <li>أسم الجهاز الافتراضي (مثلاً: “Kali Linux”).</li>
-              <li>حدّد عدد المعالجات (Cores) التي تريد تخصيصها.</li>
-              <li>حدّد مقدار الذاكرة (RAM) التي تعطيها للجهاز الافتراضي — مثلاً 2 جيجابايت أو أكثر إن ممكن.</li>
-              <li>إعداد الشبكة (Network) — غالبا استخدم NAT أو Bridged حسب احتياجك.</li>
-              <li>اختر نوع القرص الظاهري (Virtual Disk) — SCSI أو SATA حسب الخيارات.</li>
-              <li>حدّد حجم القرص الافتراضي، مثلاً 20 GB أو أكثر، ويمكن تقسيمه إلى عدة ملفات أو ملف واحد.</li>
+              <li>اسم الجهاز الافتراضي (مثلاً: “Kali Linux”).</li>
+              <li>حدد عدد المعالجات (Cores).</li>
+              <li>حدد مقدار الذاكرة (RAM) — مثلاً 2 جيجابايت أو أكثر.</li>
+              <li>إعداد الشبكة (Network) — غالباً NAT أو Bridged حسب الحاجة.</li>
+              <li>نوع القرص الظاهري (Virtual Disk) — SCSI أو SATA.</li>
+              <li>حدد حجم القرص الافتراضي، مثلاً 20GB أو أكثر.</li>
               <li>تابع الإعدادات وأكمل إنشاء الجهاز الافتراضي.</li>
             </ul>
           </li>
           <li>
             <b>بدء التثبيت داخل الجهاز الافتراضي</b>
             <ul>
-              <li>شغّل الجهاز الافتراضي → سيُقلع من الـ ISO.</li>
-              <li>ستظهر لك خيارات التثبيت: اختر <span class="magic-word">Graphical Install</span> أو <span class="magic-word">Install</span>.</li>
+              <li>شغّل الجهاز الافتراضي → يقلع من الـ ISO.</li>
+              <li>ستظهر خيارات التثبيت: اختر <span class="magic-word">Graphical Install</span> أو <span class="magic-word">Install</span>.</li>
               <li>
                 اتبع الخطوات:
                 <ul>
                   <li>اختيار اللغة</li>
-                  <li>اختيار التخطيط (Layout) للوحة المفاتيح</li>
-                  <li>إعداد الشبكة (Hostname، Domain إن لزم)</li>
-                  <li>إنشاء مستخدم وكلمة المرور</li>
-                  <li>تقسيم القرص — غالبًا الخيار <span class="magic-word">Guided — use entire disk</span> يكون مناسب للبداية</li>
-                  <li>تأكيد التغييرات في القرص</li>
+                  <li>تخطيط لوحة المفاتيح</li>
+                  <li>إعداد الشبكة (Hostname، Domain)</li>
+                  <li>إنشاء مستخدم وكلمة مرور</li>
+                  <li>تقسيم القرص — غالباً <span class="magic-word">Guided — use entire disk</span></li>
+                  <li>تأكيد تغييرات القرص</li>
                 </ul>
               </li>
               <li>بعد التثبيت، سيُطلب تثبيت GRUB bootloader على /dev/sda — وافق عليه.</li>
@@ -103,121 +171,21 @@
 sudo apt install -y open-vm-tools-desktop fuse
 sudo reboot
             </code></pre>
-            <div style="font-size:0.99em; margin-top:10px;">
-              <span style="color:#6a82fb;">مصدر: </span>
-              <a href="https://www.kali.org/docs/virtualization/install-vmware-guest-tools/" target="_blank">Kali Linux Official Docs</a>
+            <div style="font-size:0.99em; margin-top:9px;">
+              <span style="color:#ff6a00;">مصدر: </span>
+              <a href="https://www.kali.org/docs/virtualization/install-vmware-guest-tools/" target="_blank" style="color:#ffd700;">Kali Linux Official Docs</a>
             </div>
           </li>
         </ol>
       </div>
       <div class="ready-helper">
-        <p>إذا تحب، أرسل لك ملف إعداد VMware (.vmx) جاهز أو صور توضحية لكل خطوة من عندك 😉 جاهز أساعدك بالتفصيل إذا واجهتك مشكلة في أي خطوة. هل تبدأ بها؟</p>
-      </div>
-    </section>
-    <!-- الإنجليزي -->
-    <section class="dev-section glass lang-en">
-      <h1 class="epic-title"><i class="fa-solid fa-code"></i> Developer</h1>
-      <h2 class="highlight" style="margin-top:20px;">🛠 Steps to Install Kali Linux on VMware</h2>
-      <div class="dev-steps">
-        <ol>
-          <li>
-            <b>Preparation</b>
-            <ul>
-              <li>Download the Kali Linux ISO from the official site.</li>
-              <li>Make sure your device supports virtualization (Intel VT‑x or AMD‑V), and it's enabled in BIOS/UEFI.</li>
-              <li>Prepare enough resources (RAM, disk space) for the virtual machine.</li>
-            </ul>
-          </li>
-          <li>
-            <b>Create a New Virtual Machine in VMware</b>
-            <ul>
-              <li>Open VMware → Select <span class="magic-word">Create a New Virtual Machine</span>.</li>
-              <li>Choose install type: usually <span class="magic-word">Custom (Advanced)</span> for more control.</li>
-              <li>When asked, point to the ISO file you downloaded.</li>
-              <li>
-                Choose guest OS:
-                <ul>
-                  <li>Type: <span class="magic-word">Linux</span></li>
-                  <li>Version: choose <span class="magic-word">Debian (64-bit)</span> or whatever matches your Kali version.</li>
-                </ul>
-              </li>
-              <li>Name your virtual machine (example: “Kali Linux”).</li>
-              <li>Choose how many CPU cores you want to assign.</li>
-              <li>Specify the memory (RAM) for the VM — e.g., 2GB or more if possible.</li>
-              <li>Network setup — usually NAT or Bridged as needed.</li>
-              <li>Choose virtual disk type — SCSI or SATA as available.</li>
-              <li>Specify disk size, e.g., 20GB or more, can be split into multiple files or a single file.</li>
-              <li>Continue and finish VM setup.</li>
-            </ul>
-          </li>
-          <li>
-            <b>Start Installation in the Virtual Machine</b>
-            <ul>
-              <li>Power on the VM → it will boot from the ISO.</li>
-              <li>You'll see install options: select <span class="magic-word">Graphical Install</span> or <span class="magic-word">Install</span>.</li>
-              <li>
-                Follow the steps:
-                <ul>
-                  <li>Select language</li>
-                  <li>Choose keyboard layout</li>
-                  <li>Network setup (Hostname, Domain if needed)</li>
-                  <li>Create user and password</li>
-                  <li>Disk partition — usually <span class="magic-word">Guided — use entire disk</span> is good for beginners</li>
-                  <li>Confirm disk changes</li>
-                </ul>
-              </li>
-              <li>After install, you'll be asked to install GRUB bootloader on /dev/sda — accept.</li>
-              <li>When done, reboot the VM.</li>
-            </ul>
-          </li>
-          <li>
-            <b>Install VMware Tools inside Kali</b>
-            <br>
-            For better performance (screen size, shared folders, etc):
-            <pre><code>sudo apt update
-sudo apt install -y open-vm-tools-desktop fuse
-sudo reboot
-            </code></pre>
-            <div style="font-size:0.99em; margin-top:10px;">
-              <span style="color:#6a82fb;">Source: </span>
-              <a href="https://www.kali.org/docs/virtualization/install-vmware-guest-tools/" target="_blank">Kali Linux Official Docs</a>
-            </div>
-          </li>
-        </ol>
-      </div>
-      <div class="ready-helper">
-        <p>If you want, I can send you a ready VMware setup file (.vmx) or step-by-step screenshots! 😉 Let me know if you need help with any step.</p>
+        إذا تريد ملف إعداد VMware (.vmx) جاهز أو صور لكل خطوة، أرسل لي!  
+        جاهز أساعدك بأي مشكلة تواجهك في أي خطوة. تبدأ؟ 😉
       </div>
     </section>
   </main>
   <footer class="footer glass">
-    <p>© 2025 Made by MALEK AL-ASTAL ✨</p>
+    <p>© 2025 Made by MALEK AL-ASTAL <span style="color:#ff6a00;">🔥</span></p>
   </footer>
-  <!-- لغة بسيطة بدون جافاسكريبت -->
-  <style>
-    .lang-en { display: none; }
-    #langToggle:checked ~ .lang-label { background: #6a82fb; color: #fff; }
-    #langToggle:checked ~ .lang-label span { color: #fff; }
-    #langToggle:checked ~ .lang-ar { display: none; }
-    #langToggle:checked ~ .lang-en { display: block; }
-    /* حل عبر جافاسكريبت لاحقاً لو تريد ديناميكي أكثر */
-  </style>
-  <script>
-    // تبديل العرض عند تغيير زر اللغة
-    const langToggle = document.getElementById('langToggle');
-    const langAr = document.querySelector('.lang-ar');
-    const langEn = document.querySelector('.lang-en');
-    if (langToggle) {
-      langToggle.addEventListener('change', function() {
-        if (langToggle.checked) {
-          langAr.style.display = 'none';
-          langEn.style.display = 'block';
-        } else {
-          langAr.style.display = 'block';
-          langEn.style.display = 'none';
-        }
-      });
-    }
-  </script>
 </body>
 </html>
