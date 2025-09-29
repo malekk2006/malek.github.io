@@ -5,24 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MALEKverse | MALEK AL-ASTAL</title>
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" href="assets/icon.jpg" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="assets/icon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-  <div class="animated-bg"></div>
-  <!-- زر الوضع الليلي/العادي -->
-  <button id="darkModeToggle" class="dark-mode-btn" title="تغيير الوضع">
-    <i id="darkModeIcon" class="fas fa-moon"></i>
-  </button>
-  <header class="main-header glass">
+  <header class="main-header">
     <nav class="navbar">
       <div class="logo">
         <img src="assets/icon.jpg" alt="Logo" class="logo-img" />
         MALEKverse
       </div>
       <ul class="nav-menu">
-        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="developer.html">Developer</a></li>
         <li><a href="reader.html">Reader</a></li>
         <li><a href="about.html">About Me</a></li>
@@ -38,58 +33,17 @@
       </div>
     </nav>
     <div class="hero-section">
-      <div class="hero-content glass">
-        <img src="assets/malek.jpg" alt="MALEK AL-ASTAL" class="profile-img epic" />
-        <h1 class="epic-title">Welcome to <span class="highlight">MALEKverse</span></h1>
+      <div class="hero-content">
+        <img src="assets/malek.jpg" alt="MALEK AL-ASTAL" class="profile-img" />
+        <h1>Hello World!</h1>
         <h2>I'm <span class="highlight">MALEK AL-ASTAL</span></h2>
-        <p class="epic-desc">Student for life, passionate developer & reader.<br>
-          Let's build something <span class="magic-word">legendary</span> together.</p>
-        <a href="mailto:malek@example.com" class="btn-contact epic-btn">Contact Me</a>
+        <p>A student for life;<br>Trying to build a successful relationship with Codes and pretty other things.</p>
+        <a href="mailto:malek@example.com" class="btn-contact">Contact Me</a>
       </div>
     </div>
   </header>
-  <footer class="footer glass">
+  <footer class="footer">
     <p>© 2025 Made by MALEK AL-ASTAL ✨</p>
   </footer>
-  <!-- كود JS للوضع الليلي/العادي -->
-  <script>
-    const toggleBtn = document.getElementById('darkModeToggle');
-    const icon = document.getElementById('darkModeIcon');
-    const body = document.body;
-
-    // حفظ الوضع في LocalStorage
-    function setMode(mode) {
-      if (mode === 'dark') {
-        body.classList.add('dark-mode');
-        icon.classList.remove('fa-moon');
-        icon.classList.add('fa-sun');
-        localStorage.setItem('siteMode', 'dark');
-      } else {
-        body.classList.remove('dark-mode');
-        icon.classList.remove('fa-sun');
-        icon.classList.add('fa-moon');
-        localStorage.setItem('siteMode', 'light');
-      }
-    }
-
-    // عند الضغط على الزر
-    toggleBtn.onclick = function() {
-      if (body.classList.contains('dark-mode')) {
-        setMode('light');
-      } else {
-        setMode('dark');
-      }
-    };
-
-    // تفعيل الوضع حسب التخزين أو إعدادات النظام
-    window.onload = function() {
-      const savedMode = localStorage.getItem('siteMode');
-      if (savedMode === 'dark' || (savedMode === null && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        setMode('dark');
-      } else {
-        setMode('light');
-      }
-    };
-  </script>
 </body>
 </html>
