@@ -1,8 +1,50 @@
+body {
+  font-family: 'Cairo', 'Montserrat', Arial, sans-serif;
+  background: linear-gradient(120deg, #1e1e2f 0%, #ff6a00 100%);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* خلفية نار متحركة */
+.bg-flames {
+  position: fixed;
+  z-index: -10;
+  width: 100vw;
+  height: 100vh;
+  top: 0; left: 0;
+  background: radial-gradient(circle at 70% 40%, #ff6a00 0%, #1e1e2f 80%);
+  animation: flames 12s ease-in-out infinite;
+}
+@keyframes flames {
+  0%, 100% { background-position: 70% 40%; }
+  50% { background-position: 50% 60%; }
+}
+
+/* Glass effect */
+.glass {
+  backdrop-filter: blur(8px) saturate(130%);
+  background: rgba(30,30,47,0.82);
+  box-shadow: 0 8px 32px 0 #ff6a0022;
+  border-radius: 22px;
+  border: 1.8px solid #ff6a0044;
+}
+
+/* الهيدر والقائمة */
+.main-header {
+  margin-top: 0;
+  padding-bottom: 30px;
+  padding-top: 10px;
+}
+
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 24px 0 24px;
+  padding: 16px 40px 0 40px;
   gap: 0;
   background: transparent;
   width: 100%;
@@ -85,43 +127,128 @@
   transform: scale(1.17) rotate(-8deg);
 }
 
-/* للجوال: */
+/* زر القائمة للجوال */
+.menu-btn {
+  display: none;
+  position: fixed;
+  top: 15px;
+  right: 18px;
+  z-index: 1002;
+  background: linear-gradient(120deg,#ff6a00,#ffd700);
+  color: #232946;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 2.2rem;
+  box-shadow: 0 2px 12px #ff6a0044;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.18s;
+}
+.menu-btn:active {
+  transform: scale(0.94);
+  background: linear-gradient(120deg,#ffd700,#ff6a00);
+}
+
+/* القائمة الجانبية للجوال */
+.side-menu {
+  display: none;
+  position: fixed;
+  top: 0; right: 0;
+  width: 78vw;
+  max-width: 320px;
+  height: 100vh;
+  background: rgba(34,34,44,0.98);
+  box-shadow: -2px 0 24px #ff6a0044;
+  z-index: 1100;
+  padding: 0;
+  animation: slideMenu 0.32s cubic-bezier(0.6,0,0.5,1);
+}
+@keyframes slideMenu {
+  from { right: -350px; opacity: 0;}
+  to   { right: 0; opacity: 1;}
+}
+.side-menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 19px 16px 8px 16px;
+  font-size: 1.25rem;
+  color: #ffd700;
+  font-family: 'Montserrat',serif;
+  border-bottom: 1.2px solid #ff6a0044;
+}
+.close-btn {
+  background: transparent;
+  border: none;
+  color: #ff6a00;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.close-btn:active { color: #ffd700; }
+
+.side-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 22px 0 0 0;
+}
+.side-menu ul li {
+  margin: 0;
+  padding: 0;
+}
+.side-menu ul li a {
+  display: block;
+  padding: 16px 24px;
+  color: #fff;
+  font-size: 1.19rem;
+  font-family: 'Montserrat',sans-serif;
+  text-decoration: none;
+  border-radius: 9px;
+  margin-bottom: 3px;
+  transition: background 0.18s, color 0.18s;
+}
+.side-menu ul li a:hover {
+  background: linear-gradient(90deg,#ff6a00 60%,#ffd700 100%);
+  color: #232946;
+}
+
+.side-social {
+  display: flex;
+  gap: 14px;
+  padding: 20px 18px 0 18px;
+  border-top: 1.2px solid #ff6a0044;
+  margin-top: 12px;
+}
+.side-social a {
+  color: #ff6a00;
+  font-size: 1.4rem;
+  background: rgba(255,255,255,0.10);
+  border-radius: 50%;
+  padding: 7px;
+  transition: background 0.15s, color 0.18s;
+}
+.side-social a:hover {
+  background: #ffd700;
+  color: #232946;
+}
+.menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(30,30,47,0.45);
+  z-index: 1090;
+}
+
+/* للجوال فقط */
 @media (max-width: 700px) {
-  .navbar {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-between;
-    padding: 13px 5px 0 5px;
-    gap: 0;
-  }
-  .logo {
-    font-size: 1.07rem;
-    gap: 5px;
-  }
-  .logo-img {
-    width: 26px;
-    height: 26px;
-  }
-  .nav-menu {
-    gap: 3px;
-    flex: 1 1 auto;
-    font-size: 0.95rem;
-    overflow-x: auto;
-    scrollbar-width: thin;
-    scrollbar-color: #ff6a00 #232946;
-  }
-  .nav-menu li a {
-    font-size: 0.97rem;
-    padding: 5px 8px;
-    border-radius: 7px;
-    min-width: 47px;
-  }
-  .social-links {
-    gap: 4px;
-  }
-  .social-links a {
-    font-size: 1.02rem;
-    padding: 1px;
-  }
+  .menu-btn { display: block; }
+  .side-menu { display: block; }
+  .menu-overlay { display: block; }
+  .navbar, .nav-menu, .social-links { display: none !important; }
+  .main-header { padding-top: 0; }
+  .logo { font-size: 1.07rem; gap: 5px;}
+  .logo-img { width: 26px; height: 26px;}
 }
