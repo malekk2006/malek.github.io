@@ -1,4 +1,3 @@
-/* Google Fonts */
 body {
   font-family: 'Roboto', 'Cairo', Arial, sans-serif;
   background: linear-gradient(135deg, #6a82fb 0%, #fc5c7d 100%);
@@ -26,6 +25,17 @@ body {
   font-size: 2rem;
   font-weight: bold;
   color: #6a82fb;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 8px #fc5c7d55;
 }
 
 .nav-menu {
