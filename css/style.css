@@ -2,53 +2,96 @@
 
 body {
   margin: 0;
-  font-family: 'Cairo', sans-serif;
+  font-family: 'Share Tech Mono', monospace;
   background-color: #0d0d0d;
   color: #fdfdfd;
 }
 
+.header {
+  background-image: url("../assets/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .navbar {
-  background-color: #0d0d0d;
+  background-color: #111;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   border-bottom: 1px solid #00bfff;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
 }
 
 .nav-menu li a {
   color: #00bfff;
-  font-weight: bold;
   text-decoration: none;
+  font-weight: bold;
   transition: color 0.3s;
 }
 
 .nav-menu li a:hover {
   color: #00ff99;
+  text-decoration: underline;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
 }
 
 .social-links a {
   color: #00ff99;
-  background-color: rgba(0, 255, 153, 0.1);
+  font-size: 1.2em;
+  background: rgba(0, 255, 153, 0.1);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s;
+}
+
+.social-links a:hover {
+  background: #00bfff;
+  color: black;
+}
+
+.container {
+  text-align: center;
+  margin-top: 100px;
 }
 
 .container h1 {
+  font-size: 3em;
   color: #aeefff;
 }
 
 .container h2 {
+  font-size: 2em;
   color: #00bfff;
 }
 
 .container p {
+  font-size: 1.2em;
+  line-height: 1.6;
   color: #fdfdfd;
 }
 
-.card {
-  background-color: #f5f5dc;
-  color: #0d0d0d;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-}
-
 .footer {
+  text-align: center;
+  padding: 20px;
   background-color: #111;
-  color: #aeefff;
+  color: #f5f5dc;
+  font-size: 0.9em;
 }
