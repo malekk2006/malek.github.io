@@ -3,79 +3,84 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Me | MALEKverse</title>
+  <title>About Me | MALEK AL-ASTAL</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" href="assets/icon.jpg" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Bree+Serif&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Bree+Serif&family=Cairo:wght@700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     .about-section {
       max-width: 560px;
-      margin: 45px auto;
-      background: rgba(255,255,255,0.92);
+      margin: 45px auto 40px auto;
+      background: rgba(34,34,44,0.97);
       border-radius: 33px;
-      box-shadow: 0 8px 32px #6a82fb33;
+      box-shadow: 0 8px 32px #ff6a0044;
       padding: 45px 28px 32px 28px;
       text-align: center;
       font-family: 'Bree Serif','Cairo',serif;
       position: relative;
-      backdrop-filter: blur(6px);
-      border: 2.2px solid #fc5c7d77;
+      border: 2.2px solid #ff6a0044;
+      color: #fff;
     }
     .about-title {
       font-size: 2.14rem;
       font-family: 'Bree Serif','Montserrat',serif;
-      color: #6a82fb;
-      letter-spacing: 1.5px;
-      margin-bottom: 9px;
-      text-shadow: 0 2px 10px #fc5c7d44;
+      color: #ff6a00;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+      text-shadow: 0 2px 10px #ff6a0044;
+      font-weight: bold;
     }
-    .about-smile {
-      font-size: 1.43rem;
-      color: #fc5c7d;
-      margin-left: 6px;
+    .about-flame {
+      font-size: 1.55rem;
+      color: #ffd700;
+      margin-left: 5px;
       vertical-align: middle;
     }
     .about-desc {
       font-size: 1.18rem;
       line-height: 1.85;
-      color: #222;
+      color: #fff;
       margin: 24px 0 0 0;
       text-align: right;
       direction: rtl;
       font-family: 'Bree Serif','Cairo',serif;
-    }
-    .about-icon {
-      font-size: 1.15rem;
-      color: #fc5c7d;
-      vertical-align: middle;
-      margin: 0 3px;
-    }
-    .about-bullet {
-      font-size: 1.22rem;
-      color: #6a82fb;
-      margin-left: 8px;
+      letter-spacing: 0.5px;
     }
     .about-highlight {
-      color: #fc5c7d;
+      color: #ffd700;
       font-weight: bold;
       font-family: 'Montserrat',sans-serif;
       font-size: 1.05em;
     }
+    .about-quote {
+      font-size: 1.18em;
+      color: #ff6a00;
+      margin: 32px 0 13px 0;
+      font-family: 'Bree Serif',serif;
+      letter-spacing: 1px;
+    }
+    .about-signature {
+      font-family: 'Bree Serif',serif;
+      font-size: 1.12em;
+      color: #ffd700;
+      margin-top: 15px;
+      letter-spacing: 1px;
+    }
     @media (max-width: 700px) {
-      .about-section { padding: 15px 3vw; max-width: 98vw;}
+      .about-section { padding: 13px 2vw; max-width: 99vw;}
       .about-title { font-size: 1.09rem;}
       .about-desc { font-size: 1.03rem;}
     }
   </style>
 </head>
 <body>
-  <div class="animated-bg"></div>
+  <div class="bg-flames"></div>
   <header class="main-header glass">
     <nav class="navbar">
       <div class="logo">
         <img src="assets/icon.jpg" alt="Logo" class="logo-img" />
-        MALEKverse
+        <span>MALEK AL-ASTAL</span>
       </div>
       <ul class="nav-menu">
         <li><a href="index.html">Home</a></li>
@@ -96,26 +101,30 @@
   </header>
   <main>
     <section class="about-section glass">
-      <div class="about-title">✦ 𝓜𝓪𝓵𝓮𝓴 𝓡. 𝓐𝓵𝓪𝓼𝓽𝓪𝓵 ✦ <span class="about-smile">😔</span></div>
-      <div class="about-desc">
-        <span class="about-icon">🏙️</span> في مدينة <span class="about-highlight">محاصرة</span>، وُلد الحلم رغم الحطام. <span class="about-smile">😢</span><br>
-        من غزة… حيث انقطاع الكهرباء <span class="about-smile">😔</span>، ضعف الإنترنت <span class="about-smile">😔</span>، وقلة الموارد مش عذر <span class="about-smile">😢</span>، بل <span class="about-highlight">حافز</span>.<br><br>
-        أنا شاب فلسطيني يعيش واقعًا صعبًا <span class="about-smile">😔</span>، لكني صنعت من التحدي طريق.<br>
-        اخترت طريق <span class="about-highlight">البرمجة والأمن السيبراني</span>، مش لأن الظروف ساعدتني… بل لأنني قررت أقاتل عشان مستقبلي.<br><br>
-        <span class="about-bullet">📌</span> ما عنديش مراكز تدريب <span class="about-smile">😢</span>، ولا معدات متطورة <span class="about-smile">😢</span>، ولا حتى فرص واضحة.<br>
-        لكن:<br>
-        <span class="about-bullet">–</span> قرأت<br>
-        <span class="about-bullet">–</span> جرّبت<br>
-        <span class="about-bullet">–</span> أخطأت وتعلمت<br>
-        <span class="about-bullet">–</span> وبنيت نفسي من الصفر <span class="about-smile">😔</span><br><br>
-        🛡 تخصصت في <span class="about-highlight">الأمن السيبراني</span>، مش بس لأني بحب الاختراق الأخلاقي، بل لأني حاب أكون خط الحماية الأول لوطني، أهلي، وكل حدا بيستحق الأمان.<br><br>
-        أنا مش بس مبرمج...<br>
-        أنا <span class="about-highlight">صوت من غزة</span>، بكتب كود من تحت القصف <span class="about-smile">😢</span>، وبحلم بلحظة أغير فيها الواقع من خلال سطر.<br>
+      <div class="about-title">
+        ✦ 𝓜𝓪𝓵𝓮𝓴 𝓡. 𝓐𝓵𝓪𝓼𝓽𝓪𝓵 ✦ <span class="about-flame">🔥</span>
       </div>
+      <div class="about-desc">
+        في مدينة <span class="about-highlight">محاصرة</span>، وُلد حلم رغم الحطام.<br>
+        من غزة… حيث انقطاع الكهرباء، ضعف الإنترنت، وقلة الموارد ليست عذر، بل <span class="about-highlight">حافز</span>.<br><br>
+        أنا شاب فلسطيني أعيش واقعًا صعبًا، لكني صنعت من التحدي طريق.<br>
+        اخترت طريق <span class="about-highlight">البرمجة والأمن السيبراني</span> ليس لأن الظروف ساعدتني… بل لأنني قررت أقاتل لأجل مستقبلي.<br><br>
+        ما عندي مراكز تدريب، ولا معدات متطورة، ولا حتى فرص واضحة.<br>
+        لكن:<br>
+        – قرأت<br>
+        – جرّبت<br>
+        – أخطأت وتعلمت<br>
+        – وبنيت نفسي من الصفر<br><br>
+        🛡 تخصصت في <span class="about-highlight">الأمن السيبراني</span> ليس فقط لأني أحب الاختراق الأخلاقي، بل لأني أريد أن أكون خط الحماية الأول لوطني، أهلي، وكل من يستحق الأمان.<br><br>
+        أنا لست مجرد مبرمج...<br>
+        أنا صوت من غزة، أكتب كود من تحت القصف، وأحلم بلحظة أغير فيها الواقع من خلال سطر.<br>
+      </div>
+      <div class="about-quote">🔥 I turn pain into code, and dreams into firewalls. 🔥</div>
+      <div class="about-signature">— MALEK AL-ASTAL</div>
     </section>
   </main>
   <footer class="footer glass">
-    <p>© 2025 Made by MALEK AL-ASTAL ✨</p>
+    <p>© 2025 Made by MALEK AL-ASTAL <span style="color:#ff6a00;">🔥</span></p>
   </footer>
 </body>
 </html>
