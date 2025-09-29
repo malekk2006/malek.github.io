@@ -1,23 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects | MALEK AL-ASTAL</title>
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" href="assets/icon.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Cairo:wght@700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="assets/icon.jpg" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Cairo:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .projects-section {
+      max-width: 900px;
+      margin: 55px auto 45px auto;
+      background: rgba(34,34,44,0.95);
+      border-radius: 40px;
+      box-shadow: 0 8px 32px #ff6a0044;
+      padding: 38px 28px 32px 28px;
+      text-align: center;
+      position: relative;
+    }
+    .projects-title {
+      font-size: 2.3rem;
+      font-family: 'Montserrat','Bree Serif',serif;
+      color: #ff6a00;
+      letter-spacing: 2px;
+      margin-bottom: 34px;
+      text-shadow: 0 2px 14px #ff6a0044;
+    }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 34px;
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+    .project-card {
+      background: linear-gradient(120deg,#ff6a0033 0%,#1e1e2f99 100%);
+      border-radius: 24px;
+      box-shadow: 0 2px 14px #ff6a0044;
+      padding: 28px 20px 21px 20px;
+      text-align: left;
+      position: relative;
+      color: #fff;
+      transition: box-shadow 0.2s, transform 0.2s;
+      border: 1.7px solid #ff6a0044;
+    }
+    .project-card:hover {
+      box-shadow: 0 6px 32px #ff6a0077;
+      transform: scale(1.04) translateY(-6px);
+      background: linear-gradient(120deg,#ff6a00cc 0%,#1e1e2fcc 100%);
+    }
+    .project-icon {
+      font-size: 2.8rem;
+      color: #ffd700;
+      margin-bottom: 14px;
+    }
+    .project-title {
+      font-size: 1.35rem;
+      font-weight: bold;
+      color: #ffd700;
+      margin-bottom: 7px;
+      font-family: 'Montserrat',serif;
+      letter-spacing: 1px;
+    }
+    .project-desc {
+      font-size: 1.07rem;
+      margin-bottom: 18px;
+      font-family: 'Cairo',sans-serif;
+      color: #fff;
+      line-height: 1.5;
+    }
+    .project-links a {
+      text-decoration: none;
+      background: linear-gradient(90deg,#ffd700 60%,#ff6a00 100%);
+      color: #222;
+      font-weight: 600;
+      border-radius: 14px;
+      padding: 8px 18px;
+      font-size: 1.07rem;
+      margin-right: 8px;
+      box-shadow: 0 2px 10px #ff6a0033;
+      transition: background 0.18s, color 0.18s;
+      display: inline-block;
+    }
+    .project-links a:hover {
+      background: linear-gradient(90deg,#ff6a00 60%,#ffd700 100%);
+      color: #fff;
+    }
+    @media (max-width: 700px) {
+      .projects-section { padding: 11px 2vw; max-width: 99vw;}
+      .projects-title { font-size: 1.2rem;}
+      .projects-grid { grid-template-columns: 1fr;}
+    }
+  </style>
 </head>
 <body>
-  <div class="header page-container">
+  <div class="bg-flames"></div>
+  <header class="main-header glass">
     <nav class="navbar">
-      <div class="social-links">
-        <a href="https://github.com/malekk2006" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="mailto:malek@example.com"><i class="fas fa-envelope"></i></a>
-        <a href="https://www.instagram.com/m.ram.2006" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://wa.me/972598561044" target="_blank"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://www.linkedin.com/in/malek-alastal-85a630387/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <div class="logo">
+        <img src="assets/icon.jpg" alt="Logo" class="logo-img" />
+        <span>MALEK AL-ASTAL</span>
       </div>
       <ul class="nav-menu">
         <li><a href="index.html">Home</a></li>
@@ -25,33 +108,61 @@
         <li><a href="reader.html">Reader</a></li>
         <li><a href="about.html">About Me</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
       </ul>
+      <div class="social-links">
+        <a href="https://github.com/malekk2006" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="mailto:malek@example.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.instagram.com/m.ram.2006" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/972598561044" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.linkedin.com/in/malek-alastal-85a630387/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      </div>
     </nav>
-
-    <section class="container">
-      <h1>My Projects</h1>
+  </header>
+  <main>
+    <section class="projects-section glass">
+      <div class="projects-title">🔥 My Projects 🔥</div>
       <div class="projects-grid">
+        <!-- مثال لمشروع: يمكنك تكرار البلوك التالي لكل مشروع -->
         <div class="project-card">
-          <h3>Portfolio Website</h3>
-          <p>My personal website built with HTML, CSS, and JavaScript.</p>
-          <a href="https://github.com/malekk2006/malek.github.io" target="_blank">View on GitHub</a>
+          <div class="project-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <div class="project-title">CyberSecurity Toolkit</div>
+          <div class="project-desc">
+            مجموعة أدوات أمنية متكاملة لفحص المواقع واكتشاف الثغرات بطريقة احترافية وسهلة الاستخدام.
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/malekk2006/cybersecurity-toolkit" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="#" target="_blank"><i class="fa-solid fa-eye"></i> Demo</a>
+          </div>
         </div>
         <div class="project-card">
-          <h3>Weather App</h3>
-          <p>Simple weather app using OpenWeather API and JavaScript.</p>
-          <a href="https://github.com/malekk2006/weather-app" target="_blank">View on GitHub</a>
+          <div class="project-icon"><i class="fa-solid fa-globe"></i></div>
+          <div class="project-title">Personal Portfolio</div>
+          <div class="project-desc">
+            موقع شخصي يعرض أعمالي ومهاراتي البرمجية، مع واجهة تفاعلية وتصميم عصري متجاوب.
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/malekk2006/malek.github.io" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://malekk2006.github.io/" target="_blank"><i class="fa-solid fa-eye"></i> Live</a>
+          </div>
         </div>
         <div class="project-card">
-          <h3>To-Do List</h3>
-          <p>Task manager with local storage and responsive design.</p>
-          <a href="https://github.com/malekk2006/todo-list" target="_blank">View on GitHub</a>
+          <div class="project-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+          <div class="project-title">Secure Chat App</div>
+          <div class="project-desc">
+            تطبيق مراسلة مشفر بالكامل لحماية الخصوصية، مبني بتقنيات حديثة للأندرويد وiOS.
+          </div>
+          <div class="project-links">
+            <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="#" target="_blank"><i class="fa-solid fa-eye"></i> Demo</a>
+          </div>
         </div>
+        <!-- أضف مشاريعك الأخرى هنا بنفس النمط -->
       </div>
     </section>
-
-    <footer class="footer">
-      <p>© 2025 Made by MALEK AL-ASTAL ✨</p>
-    </footer>
-  </div>
+  </main>
+  <footer class="footer glass">
+    <p>© 2025 Made by MALEK AL-ASTAL <span style="color:#ff6a00;">🔥</span></p>
+  </footer>
 </body>
 </html>
