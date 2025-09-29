@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,10 +32,15 @@
         <a href="https://wa.me/972598561044" target="_blank"><i class="fab fa-whatsapp"></i></a>
         <a href="https://www.linkedin.com/in/malek-alastal-85a630387/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
       </div>
+      <div class="lang-switch">
+        <input type="checkbox" id="langToggle" />
+        <label for="langToggle" class="lang-label"><span>EN</span></label>
+      </div>
     </nav>
   </header>
   <main>
-    <section class="dev-section glass">
+    <!-- العربي -->
+    <section class="dev-section glass lang-ar">
       <h1 class="epic-title"><i class="fa-solid fa-code"></i> Developer</h1>
       <h2 class="highlight" style="margin-top:20px;">🛠 خطوات تثبيت Kali Linux على VMware</h2>
       <div class="dev-steps">
@@ -109,9 +114,110 @@ sudo reboot
         <p>إذا تحب، أرسل لك ملف إعداد VMware (.vmx) جاهز أو صور توضحية لكل خطوة من عندك 😉 جاهز أساعدك بالتفصيل إذا واجهتك مشكلة في أي خطوة. هل تبدأ بها؟</p>
       </div>
     </section>
+    <!-- الإنجليزي -->
+    <section class="dev-section glass lang-en">
+      <h1 class="epic-title"><i class="fa-solid fa-code"></i> Developer</h1>
+      <h2 class="highlight" style="margin-top:20px;">🛠 Steps to Install Kali Linux on VMware</h2>
+      <div class="dev-steps">
+        <ol>
+          <li>
+            <b>Preparation</b>
+            <ul>
+              <li>Download the Kali Linux ISO from the official site.</li>
+              <li>Make sure your device supports virtualization (Intel VT‑x or AMD‑V), and it's enabled in BIOS/UEFI.</li>
+              <li>Prepare enough resources (RAM, disk space) for the virtual machine.</li>
+            </ul>
+          </li>
+          <li>
+            <b>Create a New Virtual Machine in VMware</b>
+            <ul>
+              <li>Open VMware → Select <span class="magic-word">Create a New Virtual Machine</span>.</li>
+              <li>Choose install type: usually <span class="magic-word">Custom (Advanced)</span> for more control.</li>
+              <li>When asked, point to the ISO file you downloaded.</li>
+              <li>
+                Choose guest OS:
+                <ul>
+                  <li>Type: <span class="magic-word">Linux</span></li>
+                  <li>Version: choose <span class="magic-word">Debian (64-bit)</span> or whatever matches your Kali version.</li>
+                </ul>
+              </li>
+              <li>Name your virtual machine (example: “Kali Linux”).</li>
+              <li>Choose how many CPU cores you want to assign.</li>
+              <li>Specify the memory (RAM) for the VM — e.g., 2GB or more if possible.</li>
+              <li>Network setup — usually NAT or Bridged as needed.</li>
+              <li>Choose virtual disk type — SCSI or SATA as available.</li>
+              <li>Specify disk size, e.g., 20GB or more, can be split into multiple files or a single file.</li>
+              <li>Continue and finish VM setup.</li>
+            </ul>
+          </li>
+          <li>
+            <b>Start Installation in the Virtual Machine</b>
+            <ul>
+              <li>Power on the VM → it will boot from the ISO.</li>
+              <li>You'll see install options: select <span class="magic-word">Graphical Install</span> or <span class="magic-word">Install</span>.</li>
+              <li>
+                Follow the steps:
+                <ul>
+                  <li>Select language</li>
+                  <li>Choose keyboard layout</li>
+                  <li>Network setup (Hostname, Domain if needed)</li>
+                  <li>Create user and password</li>
+                  <li>Disk partition — usually <span class="magic-word">Guided — use entire disk</span> is good for beginners</li>
+                  <li>Confirm disk changes</li>
+                </ul>
+              </li>
+              <li>After install, you'll be asked to install GRUB bootloader on /dev/sda — accept.</li>
+              <li>When done, reboot the VM.</li>
+            </ul>
+          </li>
+          <li>
+            <b>Install VMware Tools inside Kali</b>
+            <br>
+            For better performance (screen size, shared folders, etc):
+            <pre><code>sudo apt update
+sudo apt install -y open-vm-tools-desktop fuse
+sudo reboot
+            </code></pre>
+            <div style="font-size:0.99em; margin-top:10px;">
+              <span style="color:#6a82fb;">Source: </span>
+              <a href="https://www.kali.org/docs/virtualization/install-vmware-guest-tools/" target="_blank">Kali Linux Official Docs</a>
+            </div>
+          </li>
+        </ol>
+      </div>
+      <div class="ready-helper">
+        <p>If you want, I can send you a ready VMware setup file (.vmx) or step-by-step screenshots! 😉 Let me know if you need help with any step.</p>
+      </div>
+    </section>
   </main>
   <footer class="footer glass">
     <p>© 2025 Made by MALEK AL-ASTAL ✨</p>
   </footer>
+  <!-- لغة بسيطة بدون جافاسكريبت -->
+  <style>
+    .lang-en { display: none; }
+    #langToggle:checked ~ .lang-label { background: #6a82fb; color: #fff; }
+    #langToggle:checked ~ .lang-label span { color: #fff; }
+    #langToggle:checked ~ .lang-ar { display: none; }
+    #langToggle:checked ~ .lang-en { display: block; }
+    /* حل عبر جافاسكريبت لاحقاً لو تريد ديناميكي أكثر */
+  </style>
+  <script>
+    // تبديل العرض عند تغيير زر اللغة
+    const langToggle = document.getElementById('langToggle');
+    const langAr = document.querySelector('.lang-ar');
+    const langEn = document.querySelector('.lang-en');
+    if (langToggle) {
+      langToggle.addEventListener('change', function() {
+        if (langToggle.checked) {
+          langAr.style.display = 'none';
+          langEn.style.display = 'block';
+        } else {
+          langAr.style.display = 'block';
+          langEn.style.display = 'none';
+        }
+      });
+    }
+  </script>
 </body>
 </html>
