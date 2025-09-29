@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
 body {
   margin: 0;
-  font-family: 'Cairo', sans-serif;
-  background-color: #fdfdfd;
-  color: #222;
+  font-family: 'Share Tech Mono', monospace;
+  background-color: #0d0d0d;
+  color: #00ff99;
 }
 
 .header {
@@ -19,8 +18,7 @@ body {
 }
 
 .navbar {
-  background-color: #ffffff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background-color: #111;
   padding: 20px;
   display: flex;
   justify-content: space-between;
@@ -34,14 +32,14 @@ body {
 }
 
 .nav-menu li a {
-  color: #0077cc;
+  color: #00ffff;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
 }
 
 .nav-menu li a:hover {
-  color: #f0a500;
+  color: #ff00ff;
   text-decoration: underline;
 }
 
@@ -51,9 +49,9 @@ body {
 }
 
 .social-links a {
-  color: #0077cc;
+  color: #00ff99;
   font-size: 1.2em;
-  background: rgba(0, 119, 204, 0.1);
+  background: rgba(0, 255, 153, 0.1);
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -64,8 +62,8 @@ body {
 }
 
 .social-links a:hover {
-  background: #f0a500;
-  color: white;
+  background: #ff00ff;
+  color: black;
 }
 
 .container {
@@ -74,26 +72,25 @@ body {
 }
 
 .container h1 {
-  font-family: 'Bree Serif', serif;
   font-size: 3em;
-  color: #444;
+  color: #00ffff;
 }
 
 .container h2 {
   font-size: 2em;
-  color: #555;
+  color: #ff00ff;
 }
 
 .container p {
   font-size: 1.2em;
   line-height: 1.6;
-  color: #333;
+  color: #00ff99;
 }
 
 .footer {
   text-align: center;
   padding: 20px;
-  background-color: #eeeeee;
-  color: #444;
+  background-color: #111;
+  color: #f0a500;
   font-size: 0.9em;
 }
