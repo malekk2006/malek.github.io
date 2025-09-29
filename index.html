@@ -11,6 +11,10 @@
 </head>
 <body>
   <div class="animated-bg"></div>
+  <!-- زر الوضع الليلي/العادي -->
+  <button id="darkModeToggle" class="dark-mode-btn" title="تغيير الوضع">
+    <i id="darkModeIcon" class="fas fa-moon"></i>
+  </button>
   <header class="main-header glass">
     <nav class="navbar">
       <div class="logo">
@@ -47,5 +51,45 @@
   <footer class="footer glass">
     <p>© 2025 Made by MALEK AL-ASTAL ✨</p>
   </footer>
+  <!-- كود JS للوضع الليلي/العادي -->
+  <script>
+    const toggleBtn = document.getElementById('darkModeToggle');
+    const icon = document.getElementById('darkModeIcon');
+    const body = document.body;
+
+    // حفظ الوضع في LocalStorage
+    function setMode(mode) {
+      if (mode === 'dark') {
+        body.classList.add('dark-mode');
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+        localStorage.setItem('siteMode', 'dark');
+      } else {
+        body.classList.remove('dark-mode');
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+        localStorage.setItem('siteMode', 'light');
+      }
+    }
+
+    // عند الضغط على الزر
+    toggleBtn.onclick = function() {
+      if (body.classList.contains('dark-mode')) {
+        setMode('light');
+      } else {
+        setMode('dark');
+      }
+    };
+
+    // تفعيل الوضع حسب التخزين أو إعدادات النظام
+    window.onload = function() {
+      const savedMode = localStorage.getItem('siteMode');
+      if (savedMode === 'dark' || (savedMode === null && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        setMode('dark');
+      } else {
+        setMode('light');
+      }
+    };
+  </script>
 </body>
 </html>
