@@ -32,7 +32,7 @@ MALEKverse/ │ ├── index.html ├── about.html ├── projects.htm
 ## 🚀 نشر الموقع
 
 تم نشر الموقع باستخدام [GitHub Pages](https://pages.github.com/).  
-رابط مباشر: [https://malek.github.io](https://malek.github.io)
+رابط مباشر: [https://malek.github.io](https://malekk2006.github.io/malek.github.io/index.html)
 
 ---
 
