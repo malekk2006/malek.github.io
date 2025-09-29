@@ -1,3 +1,4 @@
+/* الخطوط الأساسية */
 body {
   font-family: 'Cairo', 'Montserrat', Arial, sans-serif;
   background: linear-gradient(120deg, #1e1e2f 0%, #ff6a00 100%);
@@ -9,6 +10,7 @@ body {
   overflow-x: hidden;
 }
 
+/* خلفية نار متحركة */
 .bg-flames {
   position: fixed;
   z-index: -10;
@@ -23,7 +25,7 @@ body {
   50% { background-position: 50% 60%; }
 }
 
-/* Glass Effect */
+/* تأثير زجاجي */
 .glass {
   backdrop-filter: blur(8px) saturate(130%);
   background: rgba(30,30,47,0.82);
@@ -32,7 +34,7 @@ body {
   border: 1.8px solid #ff6a0044;
 }
 
-/* Header & Navbar */
+/* الهيدر والقائمة */
 .main-header {
   margin-top: 0;
   padding-bottom: 30px;
@@ -114,7 +116,7 @@ body {
   transform: scale(1.25) rotate(-12deg);
 }
 
-/* Hero Section */
+/* الهيرو */
 .hero-section {
   display: flex;
   justify-content: center;
@@ -243,25 +245,185 @@ body {
   box-shadow: 0 -2px 18px #ff6a0044;
 }
 
-/* Responsive */
+/* أقسام البطاقات */
+.projects-section, .about-section, .reader-section, .dev-section, .contact-section {
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+
+/* مشاريع */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 34px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.project-card {
+  background: linear-gradient(120deg,#ff6a0033 0%,#1e1e2f99 100%);
+  border-radius: 24px;
+  box-shadow: 0 2px 14px #ff6a0044;
+  padding: 28px 20px 21px 20px;
+  text-align: left;
+  position: relative;
+  color: #fff;
+  transition: box-shadow 0.2s, transform 0.2s;
+  border: 1.7px solid #ff6a0044;
+}
+.project-card:hover {
+  box-shadow: 0 6px 32px #ff6a0077;
+  transform: scale(1.04) translateY(-6px);
+  background: linear-gradient(120deg,#ff6a00cc 0%,#1e1e2fcc 100%);
+}
+.project-icon {
+  font-size: 2.8rem;
+  color: #ffd700;
+  margin-bottom: 14px;
+}
+.project-title {
+  font-size: 1.35rem;
+  font-weight: bold;
+  color: #ffd700;
+  margin-bottom: 7px;
+  font-family: 'Montserrat',serif;
+  letter-spacing: 1px;
+}
+.project-desc {
+  font-size: 1.07rem;
+  margin-bottom: 18px;
+  font-family: 'Cairo',sans-serif;
+  color: #fff;
+  line-height: 1.5;
+}
+.project-links a {
+  text-decoration: none;
+  background: linear-gradient(90deg,#ffd700 60%,#ff6a00 100%);
+  color: #222;
+  font-weight: 600;
+  border-radius: 14px;
+  padding: 8px 18px;
+  font-size: 1.07rem;
+  margin-right: 8px;
+  box-shadow: 0 2px 10px #ff6a0033;
+  transition: background 0.18s, color 0.18s;
+  display: inline-block;
+}
+.project-links a:hover {
+  background: linear-gradient(90deg,#ff6a00 60%,#ffd700 100%);
+  color: #fff;
+}
+
+/* تحسينات للجوال */
 @media (max-width: 700px) {
+  body {
+    font-size: 0.98em;
+  }
   .navbar {
     flex-direction: column;
-    gap: 14px;
-    padding: 18px 10px 0 10px;
+    gap: 18px;
+    padding: 12px 2vw 0 2vw;
+  }
+  .logo {
+    font-size: 1.35rem;
+    gap: 8px;
+  }
+  .logo-img {
+    width: 32px;
+    height: 32px;
+  }
+  .nav-menu {
+    flex-direction: column;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+  }
+  .nav-menu li a {
+    font-size: 1rem;
+    padding: 8px 16px;
+    border-radius: 12px;
+  }
+  .social-links {
+    gap: 7px;
+  }
+  .social-links a {
+    font-size: 1.18rem;
+    padding: 4px;
+  }
+  .main-header, .glass {
+    border-radius: 14px;
+    padding-bottom: 12px;
+    padding-top: 5px;
+  }
+  .hero-section {
+    min-height: 57vh;
+    padding: 18px 0 16px 0;
   }
   .hero-content {
     max-width: 99vw;
-    padding: 29px 5px 23px 5px;
+    padding: 19px 4vw 13px 4vw;
+    border-radius: 16px;
+    font-size: 1em;
   }
-  .profile-img.fire-border {
-    width: 90px;
-    height: 90px;
+  .profile-img, .profile-img.fire-border {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 12px;
+    border-width: 4px;
   }
-  .epic-title {
-    font-size: 1.4rem;
+  .epic-title, .reader-title, .about-title, .dev-title, .projects-title, .contact-title {
+    font-size: 1.18rem !important;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
   }
-  .nav-menu {
-    gap: 11px;
+  .epic-desc, .reader-desc, .about-desc, .dev-steps li, .project-desc, .contact-form label {
+    font-size: 0.97rem !important;
+    margin-bottom: 7px;
+  }
+  .flame-box, .about-section, .reader-section, .dev-section, .projects-section, .contact-section {
+    padding: 10px 2vw 10px 2vw !important;
+    border-radius: 10px !important;
+    margin: 14px auto !important;
+  }
+  .projects-grid { grid-template-columns: 1fr; gap: 15px;}
+  .project-card {
+    padding: 14px 9px 12px 9px;
+    border-radius: 13px;
+    margin-bottom: 6px;
+  }
+  .project-title {
+    font-size: 1.07rem;
+    margin-bottom: 5px;
+  }
+  .project-icon {
+    font-size: 1.55rem;
+    margin-bottom: 7px;
+  }
+  .project-links a {
+    font-size: 0.97rem;
+    padding: 7px 12px;
+    margin-right: 4px;
+  }
+  .contact-form {
+    padding: 9px 2vw;
+    border-radius: 9px;
+    margin-top: 18px;
+  }
+  .contact-form input, .contact-form textarea {
+    font-size: 0.97em;
+    padding: 7px;
+    margin-bottom: 7px;
+    border-radius: 7px;
+  }
+  .contact-form button {
+    font-size: 1em;
+    padding: 9px 19px;
+    border-radius: 12px;
+  }
+  .footer {
+    font-size: 0.97rem;
+    padding: 10px 0;
+    margin-top: 12px;
+    border-radius: 15px 15px 0 0;
   }
 }
