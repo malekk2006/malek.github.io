@@ -3,21 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Developer | MALEK AL-ASTAL</title>
+  <title>Developer | MALEKverse</title>
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="icon" href="assets/icon.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Cairo:wght@700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="assets/icon.jpg" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-  <div class="header page-container">
+  <div class="animated-bg"></div>
+  <header class="main-header glass">
     <nav class="navbar">
-      <div class="social-links">
-        <a href="https://github.com/malekk2006" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="mailto:malek@example.com"><i class="fas fa-envelope"></i></a>
-        <a href="https://www.instagram.com/m.ram.2006" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://wa.me/972598561044" target="_blank"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://www.linkedin.com/in/malek-alastal-85a630387/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <div class="logo">
+        <img src="assets/icon.jpg" alt="Logo" class="logo-img" />
+        MALEKverse
       </div>
       <ul class="nav-menu">
         <li><a href="index.html">Home</a></li>
@@ -25,43 +23,95 @@
         <li><a href="reader.html">Reader</a></li>
         <li><a href="about.html">About Me</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li><a href="projects.html">Projects</a></li>
       </ul>
-    </nav>
-
-    <section class="container">
-      <h1>Developer Zone</h1>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <i class="fab fa-html5"></i>
-          <h3>HTML5</h3>
-        </div>
-        <div class="skill-card">
-          <i class="fab fa-css3-alt"></i>
-          <h3>CSS3</h3>
-        </div>
-        <div class="skill-card">
-          <i class="fab fa-js-square"></i>
-          <h3>JavaScript</h3>
-        </div>
-        <div class="skill-card">
-          <i class="fab fa-python"></i>
-          <h3>Python</h3>
-        </div>
-        <div class="skill-card">
-          <i class="fab fa-react"></i>
-          <h3>React</h3>
-        </div>
-        <div class="skill-card">
-          <i class="fab fa-git-alt"></i>
-          <h3>Git</h3>
-        </div>
+      <div class="social-links">
+        <a href="https://github.com/malekk2006" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="mailto:malek@example.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.instagram.com/m.ram.2006" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/972598561044" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.linkedin.com/in/malek-alastal-85a630387/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
       </div>
-      <p style="margin-top: 30px;">I love building clean, responsive, and interactive web applications. Always learning, always coding.</p>
+    </nav>
+  </header>
+  <main>
+    <section class="dev-section glass">
+      <h1 class="epic-title"><i class="fa-solid fa-code"></i> Developer</h1>
+      <h2 class="highlight" style="margin-top:20px;">🛠 خطوات تثبيت Kali Linux على VMware</h2>
+      <div class="dev-steps">
+        <ol>
+          <li>
+            <b>التحضير</b>
+            <ul>
+              <li>تكون قد حمّلت ملف ISO لكالي لينكس من الموقع الرسمي.</li>
+              <li>تأكّد أن جهازك يدعم الافتراضية (Virtualization) — لازم تكون مفعلة في BIOS/UEFI (مثل Intel VT‑x أو AMD‑V).</li>
+              <li>جهّز موارد الجهاز (رام، مساحة قرص) كافية للجهاز الافتراضي.</li>
+            </ul>
+          </li>
+          <li>
+            <b>إنشاء جهاز افتراضي جديد في VMware</b>
+            <ul>
+              <li>افتح VMware → اختَر <span class="magic-word">Create a New Virtual Machine</span>.</li>
+              <li>اختر نوع التثبيت: غالبًا <span class="magic-word">Custom (Advanced)</span> للحصول على خيارات أكثر تحكّم.</li>
+              <li>عندما يُطلب، أشر إلى ملف الـ ISO الذي حمّلته.</li>
+              <li>
+                اختَر نظام التشغيل الضيف:
+                <ul>
+                  <li>نوع: <span class="magic-word">Linux</span></li>
+                  <li>الإصدار: اختر توزيعة <span class="magic-word">Debian (64-bit)</span> أو ما يناسب إصدار كالي.</li>
+                </ul>
+              </li>
+              <li>أسم الجهاز الافتراضي (مثلاً: “Kali Linux”).</li>
+              <li>حدّد عدد المعالجات (Cores) التي تريد تخصيصها.</li>
+              <li>حدّد مقدار الذاكرة (RAM) التي تعطيها للجهاز الافتراضي — مثلاً 2 جيجابايت أو أكثر إن ممكن.</li>
+              <li>إعداد الشبكة (Network) — غالبا استخدم NAT أو Bridged حسب احتياجك.</li>
+              <li>اختر نوع القرص الظاهري (Virtual Disk) — SCSI أو SATA حسب الخيارات.</li>
+              <li>حدّد حجم القرص الافتراضي، مثلاً 20 GB أو أكثر، ويمكن تقسيمه إلى عدة ملفات أو ملف واحد.</li>
+              <li>تابع الإعدادات وأكمل إنشاء الجهاز الافتراضي.</li>
+            </ul>
+          </li>
+          <li>
+            <b>بدء التثبيت داخل الجهاز الافتراضي</b>
+            <ul>
+              <li>شغّل الجهاز الافتراضي → سيُقلع من الـ ISO.</li>
+              <li>ستظهر لك خيارات التثبيت: اختر <span class="magic-word">Graphical Install</span> أو <span class="magic-word">Install</span>.</li>
+              <li>
+                اتبع الخطوات:
+                <ul>
+                  <li>اختيار اللغة</li>
+                  <li>اختيار التخطيط (Layout) للوحة المفاتيح</li>
+                  <li>إعداد الشبكة (Hostname، Domain إن لزم)</li>
+                  <li>إنشاء مستخدم وكلمة المرور</li>
+                  <li>تقسيم القرص — غالبًا الخيار <span class="magic-word">Guided — use entire disk</span> يكون مناسب للبداية</li>
+                  <li>تأكيد التغييرات في القرص</li>
+                </ul>
+              </li>
+              <li>بعد التثبيت، سيُطلب تثبيت GRUB bootloader على /dev/sda — وافق عليه.</li>
+              <li>عند الانتهاء، أعد تشغيل الجهاز الافتراضي.</li>
+            </ul>
+          </li>
+          <li>
+            <b>تثبيت أدوات VMware (VMware Tools) داخل كالي</b>
+            <br>
+            لتسريع الأداء (تكبير الشاشة، مشاركة المجلدات، إلخ):
+            <pre><code>sudo apt update
+sudo apt install -y open-vm-tools-desktop fuse
+sudo reboot
+            </code></pre>
+            <div style="font-size:0.99em; margin-top:10px;">
+              <span style="color:#6a82fb;">مصدر: </span>
+              <a href="https://www.kali.org/docs/virtualization/install-vmware-guest-tools/" target="_blank">Kali Linux Official Docs</a>
+            </div>
+          </li>
+        </ol>
+      </div>
+      <div class="ready-helper">
+        <p>إذا تحب، أرسل لك ملف إعداد VMware (.vmx) جاهز أو صور توضحية لكل خطوة من عندك 😉 جاهز أساعدك بالتفصيل إذا واجهتك مشكلة في أي خطوة. هل تبدأ بها؟</p>
+      </div>
     </section>
-
-    <footer class="footer">
-      <p>© 2025 Made by MALEK AL-ASTAL ✨</p>
-    </footer>
-  </div>
+  </main>
+  <footer class="footer glass">
+    <p>© 2025 Made by MALEK AL-ASTAL ✨</p>
+  </footer>
 </body>
 </html>
