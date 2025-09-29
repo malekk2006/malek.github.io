@@ -208,6 +208,7 @@ body {
   margin-bottom: 3px;
   transition: background 0.18s, color 0.18s;
 }
+.side-menu ul li a.active,
 .side-menu ul li a:hover {
   background: linear-gradient(90deg,#ff6a00 60%,#ffd700 100%);
   color: #232946;
@@ -251,4 +252,13 @@ body {
   .main-header { padding-top: 0; }
   .logo { font-size: 1.07rem; gap: 5px;}
   .logo-img { width: 26px; height: 26px;}
+  .hero-section { padding: 10px 0 10px 0;}
+  .hero-content { max-width: 99vw; padding: 15px 3vw;}
+  .profile-img, .profile-img.fire-border { width: 64px; height: 64px; margin-bottom: 10px; border-width: 4px; }
+  .epic-title { font-size: 1.08rem;}
+  .epic-desc, .flame-box { font-size: 0.97rem;}
+  .btn-contact.flaming-btn { font-size: 0.97rem; padding: 11px 17px;}
+  .footer { font-size: 0.97rem; padding: 10px 0; border-radius: 14px 14px 0 0;}
 }
+
+/* بقية تنسيقات الموقع (الهيرو، أقسام ... ) يمكنك استخدامها كما أرسلت لك سابقاً */
