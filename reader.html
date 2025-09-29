@@ -3,19 +3,84 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Reader | MALEKverse</title>
+  <title>Reader | MALEK AL-ASTAL</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" href="assets/icon.jpg" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Bree+Serif&family=Cairo:wght@700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .reader-section {
+      max-width: 560px;
+      margin: 45px auto 40px auto;
+      background: rgba(34,34,44,0.97);
+      border-radius: 33px;
+      box-shadow: 0 8px 32px #ff6a0044;
+      padding: 45px 28px 32px 28px;
+      text-align: center;
+      font-family: 'Bree Serif','Cairo',serif;
+      position: relative;
+      border: 2.2px solid #ff6a0044;
+      color: #fff;
+    }
+    .reader-title {
+      font-size: 2.14rem;
+      font-family: 'Bree Serif','Montserrat',serif;
+      color: #ff6a00;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+      text-shadow: 0 2px 10px #ff6a0044;
+      font-weight: bold;
+    }
+    .reader-flame {
+      font-size: 1.55rem;
+      color: #ffd700;
+      margin-left: 5px;
+      vertical-align: middle;
+    }
+    .reader-desc {
+      font-size: 1.18rem;
+      line-height: 1.85;
+      color: #fff;
+      margin: 24px 0 0 0;
+      text-align: right;
+      direction: rtl;
+      font-family: 'Bree Serif','Cairo',serif;
+      letter-spacing: 0.5px;
+    }
+    .reader-highlight {
+      color: #ffd700;
+      font-weight: bold;
+      font-family: 'Montserrat',sans-serif;
+      font-size: 1.05em;
+    }
+    .reader-quote {
+      font-size: 1.18em;
+      color: #ff6a00;
+      margin: 32px 0 13px 0;
+      font-family: 'Bree Serif',serif;
+      letter-spacing: 1px;
+    }
+    .reader-signature {
+      font-family: 'Bree Serif',serif;
+      font-size: 1.12em;
+      color: #ffd700;
+      margin-top: 15px;
+      letter-spacing: 1px;
+    }
+    @media (max-width: 700px) {
+      .reader-section { padding: 13px 2vw; max-width: 99vw;}
+      .reader-title { font-size: 1.09rem;}
+      .reader-desc { font-size: 1.03rem;}
+    }
+  </style>
 </head>
 <body>
-  <div class="animated-bg"></div>
+  <div class="bg-flames"></div>
   <header class="main-header glass">
     <nav class="navbar">
       <div class="logo">
         <img src="assets/icon.jpg" alt="Logo" class="logo-img" />
-        MALEKverse
+        <span>MALEK AL-ASTAL</span>
       </div>
       <ul class="nav-menu">
         <li><a href="index.html">Home</a></li>
@@ -32,128 +97,40 @@
         <a href="https://wa.me/972598561044" target="_blank"><i class="fab fa-whatsapp"></i></a>
         <a href="https://www.linkedin.com/in/malek-alastal-85a630387/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
       </div>
-      <div class="lang-switch">
-        <input type="checkbox" id="langToggle" />
-        <label for="langToggle" class="lang-label"><span>EN</span></label>
-      </div>
     </nav>
   </header>
   <main>
-    <!-- العربي -->
-    <section class="reader-section glass lang-ar">
-      <h1 class="epic-title" style="font-family:'Bree Serif',serif;">꧁ 𝓜𝓪𝓵𝓮𝓴 𝓡𝓪𝓶𝔂 𝓐𝓵𝓪𝓼𝓽𝓪𝓵 ꧂</h1>
-      <h2 class="highlight" style="margin-top:14px;">👨‍💻 مهندس أمن سيبراني | هاكر أخلاقي | مطوّر Full-Stack</h2>
-      <hr style="margin:22px 0 18px 0; border:0; border-top:1.7px solid #fc5c7d;">
-      <div class="reader-about">
-        <h3 class="magic-word">🔸 نبذة عني</h3>
-        <p>أنا مالك الأسطل، مبرمج محترف وأخصائي أمن سيبراني من غزة - فلسطين 🇵🇸<br>
-        أعمل على تطوير الأنظمة، حماية الشبكات، واستكشاف الثغرات باستخدام أحدث أدوات كالي لينكس وأفضل تقنيات البرمجة.</p>
-        <h3 class="magic-word" style="margin-top:26px;">🔹 مجالات البرمجة</h3>
-        <ul class="skills-list">
-          <li>✨ <b>Front-End:</b> HTML, CSS, JavaScript, Bootstrap, React</li>
-          <li>✨ <b>Back-End:</b> PHP, Python, Node.js, SQL, MySQL</li>
-          <li>✨ <b>Scripting & Automation:</b> Bash, Shell, Python scripts, PowerShell</li>
-          <li>✨ <b>Mobile Apps:</b> Flutter, Java (Android), Kotlin</li>
-          <li>✨ <b>Embedded / Low-Level:</b> C, C++, Assembly</li>
-        </ul>
-        <h3 class="magic-word" style="margin-top:26px;">🔸 أدواتي في الأمن السيبراني (Kali Linux Tools)</h3>
-        <div class="tools-list">
-          🛠 Metasploit 🛠 Nmap 🛠 Wireshark 🛠 Burp Suite 🛠 SQLmap 🛠 Hydra 🛠 Aircrack-ng 🛠 Maltego 🛠 John the Ripper 🛠 Nikto 🛠 Netcat 🛠 Autopsy 🛠 Recon-ng 🛠 Ettercap
-        </div>
-        <h3 class="magic-word" style="margin-top:26px;">🔹 مهاراتي الإضافية</h3>
-        <ul class="skills-list">
-          <li>✅ تحليل الثغرات</li>
-          <li>✅ اختبار الاختراق الأخلاقي</li>
-          <li>✅ تطوير المواقع</li>
-          <li>✅ الحماية الرقمية</li>
-          <li>✅ إدارة سيرفرات لينكس</li>
-          <li>✅ تصميم قواعد البيانات</li>
-        </ul>
-        <h3 class="magic-word" style="margin-top:26px;">🔸 وسائل التواصل</h3>
-        <div class="contact-list">
-          📱 WhatsApp: +972598561044<br>
-          🐙 GitHub: <a href="https://github.com/malekk2006" target="_blank">github.com/malekk2006</a><br>
-          📸 Instagram: <a href="https://www.instagram.com/m.ram.2006" target="_blank">malek.ramy.alastal</a><br>
-          📍 From Gaza with 💻🔥
-        </div>
-        <hr style="margin:22px 0 18px 0; border:0; border-top:1.7px solid #6a82fb;">
-        <div class="reader-signature" style="font-size:1.17em; text-align:center; margin-bottom:8px;">
-          <span style="color:#fc5c7d;">🔥 شعاري:</span><br>
-          <span class="magic-word">I break systems to protect them. I build code to change them.</span>
-        </div>
+    <section class="reader-section glass">
+      <div class="reader-title">
+        ꧁ 𝓜𝓪𝓵𝓮𝓴 𝓡𝓪𝓶𝔂 𝓐𝓵𝓪𝓼𝓽𝓪𝓵 ꧂ <span class="reader-flame">🔥</span>
       </div>
-    </section>
-    <!-- الإنجليزي -->
-    <section class="reader-section glass lang-en">
-      <h1 class="epic-title" style="font-family:'Bree Serif',serif;">꧁ 𝓜𝓪𝓵𝓮𝓴 𝓡𝓪𝓶𝔂 𝓐𝓵𝓪𝓼𝓽𝓪𝓵 ꧂</h1>
-      <h2 class="highlight" style="margin-top:14px;">👨‍💻 Cybersecurity Engineer | Ethical Hacker | Full-Stack Developer</h2>
-      <hr style="margin:22px 0 18px 0; border:0; border-top:1.7px solid #fc5c7d;">
-      <div class="reader-about">
-        <h3 class="magic-word">🔸 About Me</h3>
-        <p>I'm Malek Alastal, a professional programmer and cybersecurity specialist from Gaza, Palestine 🇵🇸<br>
-        I work on developing systems, securing networks, and finding vulnerabilities using the latest Kali Linux tools and top programming technologies.</p>
-        <h3 class="magic-word" style="margin-top:26px;">🔹 Programming Fields</h3>
-        <ul class="skills-list">
-          <li>✨ <b>Front-End:</b> HTML, CSS, JavaScript, Bootstrap, React</li>
-          <li>✨ <b>Back-End:</b> PHP, Python, Node.js, SQL, MySQL</li>
-          <li>✨ <b>Scripting & Automation:</b> Bash, Shell, Python scripts, PowerShell</li>
-          <li>✨ <b>Mobile Apps:</b> Flutter, Java (Android), Kotlin</li>
-          <li>✨ <b>Embedded / Low-Level:</b> C, C++, Assembly</li>
-        </ul>
-        <h3 class="magic-word" style="margin-top:26px;">🔸 My Cybersecurity Tools (Kali Linux)</h3>
-        <div class="tools-list">
-          🛠 Metasploit 🛠 Nmap 🛠 Wireshark 🛠 Burp Suite 🛠 SQLmap 🛠 Hydra 🛠 Aircrack-ng 🛠 Maltego 🛠 John the Ripper 🛠 Nikto 🛠 Netcat 🛠 Autopsy 🛠 Recon-ng 🛠 Ettercap
-        </div>
-        <h3 class="magic-word" style="margin-top:26px;">🔹 My Additional Skills</h3>
-        <ul class="skills-list">
-          <li>✅ Vulnerability Analysis</li>
-          <li>✅ Ethical Hacking & Penetration Testing</li>
-          <li>✅ Web Development</li>
-          <li>✅ Digital Security</li>
-          <li>✅ Linux Server Administration</li>
-          <li>✅ Database Design</li>
-        </ul>
-        <h3 class="magic-word" style="margin-top:26px;">🔸 Contact</h3>
-        <div class="contact-list">
-          📱 WhatsApp: +972598561044<br>
-          🐙 GitHub: <a href="https://github.com/malekk2006" target="_blank">github.com/malekk2006</a><br>
-          📸 Instagram: <a href="https://www.instagram.com/m.ram.2006" target="_blank">malek.ramy.alastal</a><br>
-          📍 From Gaza with 💻🔥
-        </div>
-        <hr style="margin:22px 0 18px 0; border:0; border-top:1.7px solid #6a82fb;">
-        <div class="reader-signature" style="font-size:1.17em; text-align:center; margin-bottom:8px;">
-          <span style="color:#fc5c7d;">🔥 My Motto:</span><br>
-          <span class="magic-word">I break systems to protect them. I build code to change them.</span>
-        </div>
+      <div class="reader-desc">
+        👨‍💻 <span class="reader-highlight">مهندس أمن سيبراني | هاكر أخلاقي | مطور Full-Stack</span><br><br>
+        أنا مالك الأسطل من غزة، أبرمج لأحمي وأبدع.<br>
+        أعمل على تطوير الأنظمة، حماية الشبكات، واكتشاف الثغرات.<br>
+        أستخدم أدوات كالي لينكس وأحدث تقنيات البرمجة.<br><br>
+        <span class="reader-highlight">مجالات البرمجة:</span><br>
+        ✨ Front-End: HTML, CSS, JavaScript, Bootstrap, React<br>
+        ✨ Back-End: PHP, Python, Node.js, SQL, MySQL<br>
+        ✨ Scripting: Bash, Shell, Python, PowerShell<br>
+        ✨ Mobile: Flutter, Java (Android), Kotlin<br>
+        ✨ Embedded: C, C++, Assembly<br><br>
+        <span class="reader-highlight">أدواتي في الأمن السيبراني:</span><br>
+        🛠 Metasploit 🛠 Nmap 🛠 Wireshark 🛠 Burp Suite 🛠 SQLmap 🛠 Hydra 🛠 Aircrack-ng 🛠 Maltego 🛠 John the Ripper 🛠 Nikto 🛠 Netcat 🛠 Autopsy 🛠 Recon-ng 🛠 Ettercap<br><br>
+        <span class="reader-highlight">مهارات إضافية:</span><br>
+        ✅ تحليل الثغرات ✅ اختبار الاختراق ✅ تطوير المواقع ✅ الحماية الرقمية ✅ إدارة سيرفرات لينكس ✅ تصميم قواعد البيانات<br><br>
+        <span class="reader-highlight">تواصل معي:</span><br>
+        📱 WhatsApp: +972598561044<br>
+        🐙 GitHub: <a href="https://github.com/malekk2006" target="_blank" style="color:#ffd700;">github.com/malekk2006</a><br>
+        📸 Instagram: <a href="https://www.instagram.com/m.ram.2006" target="_blank" style="color:#ffd700;">malek.ramy.alastal</a><br>
+        📍 From Gaza with 💻🔥
       </div>
+      <div class="reader-quote">I break systems to protect them. I build code to change them. <span class="reader-flame">🔥</span></div>
+      <div class="reader-signature">— MALEK AL-ASTAL</div>
     </section>
   </main>
   <footer class="footer glass">
-    <p>© 2025 Made by MALEK AL-ASTAL ✨</p>
+    <p>© 2025 Made by MALEK AL-ASTAL <span style="color:#ff6a00;">🔥</span></p>
   </footer>
-  <style>
-    .lang-en { display: none; }
-    #langToggle:checked ~ .lang-label { background: #6a82fb; color: #fff; }
-    #langToggle:checked ~ .lang-label span { color: #fff; }
-    #langToggle:checked ~ .lang-ar { display: none; }
-    #langToggle:checked ~ .lang-en { display: block; }
-  </style>
-  <script>
-    // تبديل العرض عند تغيير زر اللغة
-    const langToggle = document.getElementById('langToggle');
-    const langAr = document.querySelector('.lang-ar');
-    const langEn = document.querySelector('.lang-en');
-    if (langToggle) {
-      langToggle.addEventListener('change', function() {
-        if (langToggle.checked) {
-          langAr.style.display = 'none';
-          langEn.style.display = 'block';
-        } else {
-          langAr.style.display = 'block';
-          langEn.style.display = 'none';
-        }
-      });
-    }
-  </script>
 </body>
 </html>
