@@ -10,14 +10,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-  <div class="bg-flames"></div>
+  <div class="bg-animated"></div>
   
   <!-- زر القائمة للجوال -->
   <button class="menu-btn" id="menuBtn" aria-label="فتح القائمة">
     <i class="fas fa-bars"></i>
   </button>
   <!-- القائمة الجانبية للجوال -->
-  <div class="side-menu" id="sideMenu">
+  <nav class="side-menu" id="sideMenu">
     <div class="side-menu-header">
       <span>MALEK AL-ASTAL</span>
       <button class="close-btn" id="closeBtn" aria-label="إغلاق القائمة"><i class="fas fa-times"></i></button>
@@ -37,10 +37,10 @@
       <a href="https://wa.me/972598561044" target="_blank"><i class="fab fa-whatsapp"></i></a>
       <a href="https://www.linkedin.com/in/malek-alastal-85a630387/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
     </div>
-  </div>
+  </nav>
   <div id="menuOverlay" class="menu-overlay"></div>
   
-  <!-- الهيدر الأساسي للكمبيوتر -->
+  <!-- الهيدر للكمبيوتر -->
   <header class="main-header glass">
     <nav class="navbar">
       <div class="logo">
@@ -66,16 +66,14 @@
     <section class="hero-section glass">
       <div class="hero-content">
         <img src="assets/malek.jpg" alt="MALEK AL-ASTAL" class="profile-img fire-border" />
-        <h1 class="epic-title flame-text">🔥 𝓦𝓮𝓵𝓬𝓸𝓶𝓮 𝓽𝓸 𝓽𝓱𝓮 𝓓𝓲𝓰𝓲𝓽𝓪𝓵 𝓕𝓸𝓻𝓽𝓻𝓮𝓼𝓼 𝓸𝓯 𝓜𝓐𝓛𝓔𝓚 🔥</h1>
-        <h2 class="flame-text">⪻ 𝓘’𝓶 𝓜𝓪𝓵𝓮𝓴 𝓐𝓵-𝓐𝓼𝓽𝓪𝓵 ⪼</h2>
+        <h1 class="epic-title flame-text">🔥 Welcome to the Digital Fortress of <span class="gold-text">MALEK AL-ASTAL</span> 🔥</h1>
+        <h2 class="flame-text">CyberSec Engineer | Full-Stack Dev</h2>
         <div class="epic-desc flame-box">
-          <p>🛡 𝓒𝔂𝓫𝓮𝓻𝓼𝓮𝓬 𝓔𝓷𝓰𝓲𝓷𝓮𝓮𝓻 | 💻 𝓕𝓾𝓵𝓵-𝓢𝓽𝓪𝓬𝓴 𝓓𝓮𝓿</p>
-          <p>🌍 𝓕𝓻𝓸𝓶 𝓖𝓪𝔃𝓪 — 𝔀𝓱𝓮𝓻𝓮 𝓵𝓲𝓶𝓲𝓽𝓼 𝓽𝓾𝓻𝓷 𝓲𝓷𝓽𝓸 𝓹𝓸𝔀𝓮𝓻.<br>
-          I turn pain into code, and dreams into firewalls. 🔥</p>
-          <p>💡 𝓘 𝓑𝓻𝓮𝓪𝓴 𝓢𝔂𝓼𝓽𝓮𝓶𝓼 𝓽𝓸 𝓟𝓻𝓸𝓽𝓮𝓬𝓽 𝓣𝓱𝓮𝓶<br>
-          ⚔ 𝓛𝓮𝓽'𝓼 𝓬𝓸𝓭𝓮 𝓽𝓱𝓮 𝓲𝓶𝓹𝓸𝓼𝓼𝓲𝓫𝓵𝓮 𝓽𝓸𝓰𝓮𝓽𝓱𝓮𝓻.</p>
+          <p>From Gaza, Where <span class="gold-text">limits</span> turn into <span class="fire-text">power</span>.<br>
+          I turn pain into code, and dreams into firewalls.</p>
+          <p class="magic-word">Let's code the impossible together.</p>
         </div>
-        <a href="mailto:malek@example.com" class="btn-contact flaming-btn"><i class="fa-solid fa-fire"></i> 𝓒𝓸𝓷𝓽𝓪𝓬𝓽 𝓜𝓮 • 𝓙𝓸𝓲𝓷 𝓽𝓱𝓮 𝓜𝓲𝓼𝓼𝓲𝓸𝓷</a>
+        <a href="mailto:malek@example.com" class="btn-contact flaming-btn"><i class="fa-solid fa-fire"></i> Contact Me</a>
       </div>
     </section>
   </header>
@@ -83,7 +81,7 @@
     <p>© 2025 Made by MALEK AL-ASTAL <span style="color:#ff6a00;">🔥</span></p>
   </footer>
   
-  <!-- كود القائمة الجانبية للجوال -->
+  <!-- JS للقائمة الجانبية -->
   <script>
     const menuBtn   = document.getElementById('menuBtn');
     const sideMenu  = document.getElementById('sideMenu');
